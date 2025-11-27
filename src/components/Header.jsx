@@ -3,12 +3,12 @@ import {
 	StoryblokServerComponent,
 } from '@storyblok/react/rsc';
 
-const Grid = ({ blok }) => (
-	<div {...storyblokEditable(blok)} className="grid">
-		{blok.columns.map((nestedBlok) => (
+const Header = ({ blok }) => (
+	<div {...storyblokEditable(blok)} className="header">
+		{blok.links.map((nestedBlok) => (
 			<StoryblokServerComponent blok={nestedBlok} key={nestedBlok._uid} />
 		))}
 	</div>
 );
 
-export default Grid;
+export default Header;

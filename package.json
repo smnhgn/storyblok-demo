@@ -17,7 +17,10 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@netlify/plugin-nextjs": "^5.10.6",
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.7",
     "eslint": "^9",
-    "eslint-config-next": "15.3.0"
+    "eslint-config-next": "15.3.0",
+    "typescript": "^5.9.3"
   }
 }

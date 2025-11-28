@@ -1,13 +1,13 @@
-import { SbBlokData, storyblokEditable } from '@storyblok/react/rsc';
-import { StoryblokNavItem } from '@/storyblok/components';
+import { SbBlokData, storyblokEditable } from "@storyblok/react/rsc";
+import { StoryblokNavItem } from "@/storyblok/components";
 
-const NavItem = ({ blok }: { blok: StoryblokNavItem & SbBlokData }) => {
+type HeaderProps = {
+	blok: StoryblokNavItem & SbBlokData;
+};
+
+const NavItem = ({ blok }: HeaderProps) => {
 	return (
-		<a
-			href={`/${blok.link?.cached_url}`}
-			className="nav-item"
-			{...storyblokEditable(blok)}
-		>
+		<a href={`/${blok.link?.cached_url}`} className="nav-item" {...storyblokEditable(blok)}>
 			<span>{blok.label}</span>
 		</a>
 	);

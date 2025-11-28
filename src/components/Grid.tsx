@@ -1,9 +1,5 @@
-import {
-	SbBlokData,
-	storyblokEditable,
-	StoryblokServerComponent,
-} from '@storyblok/react/rsc';
-import { StoryblokGrid } from '@/storyblok/components';
+import { SbBlokData, storyblokEditable, StoryblokServerComponent } from "@storyblok/react/rsc";
+import { StoryblokGrid } from "@/storyblok/components";
 
 const Grid = ({ blok }: { blok: StoryblokGrid & SbBlokData }) => (
 	<div {...storyblokEditable(blok)} className="grid">

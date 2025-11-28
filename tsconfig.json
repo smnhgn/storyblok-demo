@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
 		"target": "es2015",
-		"lib": ["dom", "dom.iterable"],
+		"lib": ["dom", "dom.iterable", "ES2022"],
 		"esModuleInterop": true,
 		"allowSyntheticDefaultImports": true,
 		"sourceMap": true,
@@ -18,7 +18,7 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"allowImportingTsExtensions": true,
-		"jsx": "preserve",
+		"jsx": "react-jsx",
 		"baseUrl": ".",
 		"plugins": [
 			{
@@ -28,9 +28,7 @@
 		"paths": {
 			"@/*": ["./src/*"],
 			"@/storyblok/types": [".storyblok/types/storyblok"],
-			"@/storyblok/components": [
-				".storyblok/types/288787611622424/storyblok-components"
-			]
+			"@/storyblok/components": [".storyblok/types/288787611622424/storyblok-components"]
 		}
 	},
 	"include": [
@@ -38,7 +36,8 @@
 		"**/*.ts",
 		"**/*.tsx",
 		".next/types/**/*.ts",
-		".storyblok/types/**/*.d.ts"
+		".storyblok/types/**/*.d.ts",
+		".next/dev/types/**/*.ts"
 	],
 	"exclude": ["node_modules"]
 }

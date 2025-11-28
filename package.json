@@ -1,26 +1,27 @@
 {
-  "name": "blueprint-blank-nextjs",
+  "name": "storyblok-demo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --experimental-https",
     "build": "next build",
     "start": "next start",
+    "typegen": "next typegen",
     "lint": "next lint"
   },
   "dependencies": {
-    "@storyblok/react": "^4.6.0",
-    "next": "15.3.0",
+    "@storyblok/react": "^5.4.19",
+    "next": "16.0.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@netlify/plugin-nextjs": "^5.10.6",
     "@types/node": "24.10.1",
     "@types/react": "19.2.7",
     "eslint": "^9",
     "eslint-config-next": "15.3.0",
+    "storyblok": "^4.9.0",
     "typescript": "^5.9.3"
   }
 }

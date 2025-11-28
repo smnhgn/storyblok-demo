@@ -1,7 +1,4 @@
-import {
-	storyblokEditable,
-	StoryblokServerComponent,
-} from '@storyblok/react/rsc';
+import { storyblokEditable, StoryblokServerComponent } from "@storyblok/react/rsc";
 
 const Header = ({ blok }) => (
 	<div {...storyblokEditable(blok)} className="header">

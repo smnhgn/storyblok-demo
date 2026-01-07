@@ -4,6 +4,7 @@ import Grid from "@/components/Grid";
 import Teaser from "@/components/Teaser";
 import Header from "@/components/Header";
 import NavItem from "@/components/NavItem";
+import Accordion from "@/components/Accordion";
 import { apiPlugin, storyblokInit } from "@storyblok/react/rsc";
 
 export const getStoryblokApi = storyblokInit({
@@ -16,6 +17,7 @@ export const getStoryblokApi = storyblokInit({
 		teaser: Teaser,
 		header: Header,
 		"nav-item": NavItem,
+		collapsible: Accordion
 	},
 	apiOptions: {
 		/** Set the correct region for your space. Learn more: https://www.storyblok.com/docs/packages/storyblok-js#example-region-parameter */

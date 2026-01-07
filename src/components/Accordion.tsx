@@ -5,11 +5,9 @@ import { SbBlokData, storyblokEditable, StoryblokServerComponent } from "@storyb
 import { StoryblokCollapsible } from "@/storyblok/components";
 import { ReactElement, useState } from "react";
 
-type AccordionProps = {
-	blok: StoryblokCollapsible & SbBlokData;
-};
+type AccordionProps = Partial<StoryblokCollapsible> & SbBlokData;
 
-export default function Accordion({ blok }: AccordionProps): ReactElement {
+export default function Accordion(blok: AccordionProps): ReactElement {
 	const [isOpen, setIsOpen] = useState(false);
 	const Content = motion("div");
 
@@ -28,7 +26,7 @@ export default function Accordion({ blok }: AccordionProps): ReactElement {
 					exit={{ height: 0, opacity: 0 }}
 				>
 					{blok.content?.map((nestedBlok) => (
-						<StoryblokServerComponent blok={nestedBlok} key={nestedBlok._uid} />
+						<StoryblokServerComponent key={nestedBlok._uid} {...nestedBlok} />
 					))}
 				</Content>
 			</AnimatePresence>
